@@ -48,7 +48,7 @@ var HTMLParser = function (html, callbacks) {
     rawString += ">";
     callbacks.startElement(rawString, node.localName, node.attributes);
     parseNodes(node.childNodes);
-    callbacks.endElement("</" + node.localName + ">");
+    callbacks.endElement("</" + node.localName + ">", node.localName);
   };
   var parseText = function (node) {
     callbacks.characters(
@@ -65,7 +65,7 @@ var HTMLParser = function (html, callbacks) {
     callbacks.endDocument();
   };
   var parseDocumentType = function (node) {
-    var rawString = "<!DOCTYPE " + node.nodeValue;
+    var rawString = "<!DOCTYPE " + node.nodeName;
     if (node.publicId != null) {
       rawString += " PUBLIC \"" + node.publicId + "\"";
     }

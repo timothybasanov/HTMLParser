@@ -40,7 +40,7 @@ QUnit.test( "NamespaceTest", function( assert ) {
 });
 
 QUnit.test( "AllTypesOfNodesTest", function( assert ) {
-  var html = '<!DOCTYPE null PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n\
+  var html = '<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n\
 <html><head></head><body>\n\
   <!-- Comment test &gt; -->\n\
   Text test &gt;\n\
